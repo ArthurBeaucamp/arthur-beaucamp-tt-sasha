@@ -7,25 +7,25 @@ import { createStore, compose, applyMiddleware } from 'redux';
  * Local import
  */
 import reducer from 'src/store/reducer';
-import exampleMiddleware from './exampleMiddleware';
+import afidiumMiddleware from './afidiumMiddleware';
 
 /**
  * Code
  */
 // Enhancers
-const exampleEnhancer = applyMiddleware(exampleMiddleware);
+const afidiumEnhancer = applyMiddleware(afidiumMiddleware);
 let enhancers = null;
 
 // DevTools for Redux extension
 if (process.env.NODE_ENV !== 'production') {
   enhancers = compose(
-    exampleEnhancer,
+    afidiumEnhancer,
     /* eslint-disable-next-line */
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
   );
 }
 
-enhancers = compose(exampleEnhancer);
+enhancers = compose(afidiumEnhancer);
 const store = createStore(reducer, enhancers);
 
 /**

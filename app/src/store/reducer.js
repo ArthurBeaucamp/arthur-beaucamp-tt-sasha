@@ -2,22 +2,23 @@
  * Initial State
  */
 const initialState = {
-  message: 'Coucou',
+  travelFiles: {},
 };
 
 /**
  * Types
  */
-const DO_SOMETHING = 'DO_SOMETHING';
+const TRAVEL_FILES = 'TRAVEL_FILES';
 
 /**
  * Reducer
  */
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
-    case DO_SOMETHING:
+    case TRAVEL_FILES:
       return {
         ...state,
+        travelFiles: action.data,
       };
 
     default:
@@ -28,8 +29,9 @@ const reducer = (state = initialState, action = {}) => {
 /**
  * Action Creators
  */
-export const doSomething = () => ({
-  type: DO_SOMETHING,
+export const travelFiles = data => ({
+  type: TRAVEL_FILES,
+  data,
 });
 
 /**

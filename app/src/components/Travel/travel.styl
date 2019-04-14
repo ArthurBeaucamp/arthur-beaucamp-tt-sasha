@@ -1,0 +1,54 @@
+@require "app/styles/chart"
+
+.travelContainer
+  position: relative
+  background-color: $backgroundColor
+  margin: 0 auto 1em auto
+  padding: 1em 1em 1em 4em
+  max-width: 800px
+  display: flex
+  justify-content: space-around
+
+  &-generalInfo, &-travelInfo, &-billing
+    margin: auto
+    padding: 0.25em
+
+  &-statusInfo
+    position: absolute
+    left: 1em
+    top: 50%
+    transform: translateY(-50%)
+    font-size: 2em
+    color: $iconColor
+  
+  &-generalInfo
+    &-code
+      margin-bottom: 0.25em
+    &-date
+      font-size: 0.8em
+  
+  &-billing-total
+    font-size: 1.2em
+
+/* Stopover */
+.stopover-container
+  position: relative
+  display: flex
+  justify-content: space-between
+  flex-wrap: nowrap
+  padding: 0.5em 0
+  &-step
+    position: absolute
+    top: 15px
+    border: $iconColor 1px solid
+    width: 100%
+  &-code
+    border: solid $iconColor 2px
+    border-radius: 100%
+    padding: 10px 8px
+    font-size: 0.75em
+    z-index: 10
+    background-color: $backgroundColor
+
+  &-code:not(:last-child)
+    margin-right: 10px

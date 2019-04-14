@@ -46,6 +46,7 @@ export default class Sector extends React.Component {
         {/* Stopover with same return */}
         {Object.keys(sectorStopover).length !== 0 && (
           <div className="stopover-container">
+            <hr className="stopover-container-step" />
             {sectorStopover.stopover.map((code, index) => (
               // eslint-disable-next-line react/no-array-index-key
               <p className="stopover-container-code" key={index}>{code}</p>
@@ -57,6 +58,7 @@ export default class Sector extends React.Component {
         {Object.keys(sectorStopover).length !== 0 &&
         sectorStopover.stopoverForOtherReturn.length !== 0 && (
           <div className="stopover-container">
+            <hr className="stopover-container-step" />
             {sectorStopover.stopoverForOtherReturn.map((code, index) => (
               // eslint-disable-next-line react/no-array-index-key
               <p className="stopover-container-code" key={index}>{code}</p>

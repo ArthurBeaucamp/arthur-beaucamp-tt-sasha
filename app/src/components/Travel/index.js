@@ -7,20 +7,22 @@ import PropTypes from 'prop-types';
 /**
  * Local import
  */
-import Status from 'src/components/Travel/Status';
-import Sector from 'src/components/Travel/Sector';
-import { formatDate, travelFormatDate } from 'src/utils/date';
-import { billingFormat } from 'src/utils/billing';
+import Status from './Status';
+import Sector from './Sector';
+import { formatDate, travelFormatDate } from '../../utils/date';
+import { billingFormat } from '../../utils/billing';
 
 /**
  * Code
  */
 const Travel = ({ data }) => (
   <div className="travelContainer">
+    {/* Travel xStatus */}
     <div className="travelContainer-statusInfo">
       <Status data={data.xStatus} />
     </div>
 
+    {/* Travel general information */}
     <div className="travelContainer-generalInfo">
       <p className="travelContainer-generalInfo-code">{`${data.code} ${data.host}`}</p>
 
@@ -30,6 +32,7 @@ const Travel = ({ data }) => (
       </p>
     </div>
 
+    {/* Travel fligth customer and traveller information */}
     <div className="travelContainer-travelInfo">
       <p className="travelContainer-travelInfo-customer">
         {data.customer.firstName && `${data.customer.firstName} ${data.customer.lastName}`}
@@ -46,6 +49,7 @@ const Travel = ({ data }) => (
       )}
     </div>
 
+    {/* Travel billing information */}
     {data.total && (
       <div className="travelContainer-billing">
         <p className="travelContainer-billing-total">

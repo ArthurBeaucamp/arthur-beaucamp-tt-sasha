@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 /**
  * Local import
  */
-import Travel from 'src/components/Travel';
+import Travel from '../Travel';
 
 /**
  * Code
@@ -38,6 +38,7 @@ export default class App extends React.Component {
       <div className="mainContainer">
         <h1 className="mainContainer-mainTitle">Sasha - Dossier de voyage</h1>
         <div className="mainContainer-travelFilesList">
+          {/* Travel List */}
           {travelFiles.booking && travelFiles.booking.map(travel => (
             <Travel key={travel.syscode} data={travel} />
           ))}

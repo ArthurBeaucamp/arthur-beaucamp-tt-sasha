@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 /**
  * Local import
  */
-import { stopover } from 'src/utils/sector';
+import { stopover } from '../../utils/sector';
 
 /**
  * Code
@@ -43,6 +43,7 @@ export default class Sector extends React.Component {
     const { sectorStopover } = this.state;
     return (
       <div>
+        {/* Stopover with same return */}
         {Object.keys(sectorStopover).length !== 0 && (
           <div className="stopover-container">
             {sectorStopover.stopover.map((code, index) => (
@@ -52,6 +53,7 @@ export default class Sector extends React.Component {
           </div>
         )}
 
+        {/* Stopover with other return */}
         {Object.keys(sectorStopover).length !== 0 &&
         sectorStopover.stopoverForOtherReturn.length !== 0 && (
           <div className="stopover-container">

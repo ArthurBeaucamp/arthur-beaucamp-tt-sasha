@@ -11,3 +11,7 @@ Interface d'affichage de dossiers de voyage à partir d'un JSON fournit par une 
 ### Tests unitaire
 
 * Lancer les tests unitaire : `npm test`
+
+## Wireframe
+
+![Wireframe](app/assets/Images/wireframe.png)
